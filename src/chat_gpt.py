@@ -1,5 +1,4 @@
 import os
-from datetime import datetime
 
 import openai
 
@@ -15,7 +14,7 @@ class ChatGPT:
             messages=[
                 {
                     "role": "system",
-                    "content": f"You are a helpful assistant.\nKnowledge cutoff: 2021-09\nCurrent date: {datetime.now().strftime('%Y-%m-%d')}",
+                    "content": "You are a helpful assistant.",
                 },
                 {"role": "user", "content": prompt},
             ],
