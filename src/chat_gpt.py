@@ -4,7 +4,7 @@ import openai
 
 
 class ChatGPT:
-    def __init__(self, timeout: float):
+    def __init__(self, timeout: float = 30):
         openai.api_key = os.environ["OPENAI_API_KEY"]
         self.timeout = timeout
 
