@@ -29,6 +29,13 @@ def main(args: argparse.Namespace):
                     + f'(consumed tokens: {answer["consumed_tokens"]})'
                     + color.Color.END
                 )
+        except KeyboardInterrupt:
+            print(
+                color.Color.REVERCE
+                + color.Color.RED
+                + "Keyboard interrupt"
+                + color.Color.END
+            )
         except Exception as e:
             print(color.Color.REVERCE + color.Color.RED + f"{e}" + color.Color.END)
 
