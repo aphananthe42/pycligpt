@@ -20,11 +20,7 @@ class ChatGPT:
 
     def print_greeting(self):
         print(color.Color.GREEN + f"Hello, {getpass.getuser()}🤖" + color.Color.END)
-        print(
-            color.Color.PURPLE
-            + f"Current model: {self.model},\nTimeout: {self.timeout}"
-            + color.Color.END
-        )
+        print(color.Color.PURPLE + f"Current model: {self.model},\nTimeout: {self.timeout}" + color.Color.END)
 
     def send(self, prompt: str) -> dict[str, str]:
         self.messages.append({"role": "user", "content": prompt})

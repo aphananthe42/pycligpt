@@ -30,12 +30,7 @@ def main(args: argparse.Namespace):
                     + color.Color.END
                 )
         except KeyboardInterrupt:
-            print(
-                color.Color.REVERCE
-                + color.Color.RED
-                + "Keyboard interrupt"
-                + color.Color.END
-            )
+            print(color.Color.REVERCE + color.Color.RED + "Keyboard interrupt" + color.Color.END)
         except Exception as e:
             print(color.Color.REVERCE + color.Color.RED + f"{e}" + color.Color.END)
 
@@ -43,9 +38,7 @@ def main(args: argparse.Namespace):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Config argument to set up ChatGPT")
     parser.add_argument("--gpt4", action="store_true", help="Use GPT-4 or not")
-    parser.add_argument(
-        "-t", "--timeout", default=30, type=int, help="Timeout until receive response"
-    )
+    parser.add_argument("-t", "--timeout", default=30, type=int, help="Timeout until receive response")
     args = parser.parse_args()
 
     main(args)
