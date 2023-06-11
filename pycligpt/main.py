@@ -1,15 +1,8 @@
-import argparse
-
 from . import chat_gpt, color
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Config argument to set up ChatGPT")
-    parser.add_argument("--gpt4", action="store_true", help="Use GPT-4 or not")
-    parser.add_argument("-t", "--timeout", default=30, type=int, help="Timeout until receive response")
-    args = parser.parse_args()
-
-    gpt = chat_gpt.ChatGPT(args.gpt4, args.timeout)
+    gpt = chat_gpt.ChatGPT()
     gpt.print_greeting()
 
     while True:

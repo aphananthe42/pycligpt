@@ -6,16 +6,16 @@ from . import color, settings
 
 
 class ChatGPT:
-    def __init__(self, useGPT4: bool, timeout: float):
+    def __init__(self):
         openai.api_key = settings.OPENAI_API_KEY
-        self.model = "gpt-4" if useGPT4 else "gpt-3.5-turbo"
+        self.model = settings.GPT_MODEL
+        self.timeout = settings.REQUEST_TIMEOUT
         self.messages = [
             {
                 "role": "system",
                 "content": "You are a helpful assistant.",
             }
         ]
-        self.timeout = timeout
 
     def print_greeting(self):
         print(color.Color.GREEN + f"Hello, {getpass.getuser()}🤖" + color.Color.END)
