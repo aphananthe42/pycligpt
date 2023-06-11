@@ -33,7 +33,8 @@ $ cd path/to/pycligpt
 $ touch .env
 ```
 
-```python:.env
+**.env**
+```python
 # OpenAI API key you get from https://platform.openai.com/account/api-keys
 OPENAI_API_KEY = "_YOUR_OPENAI_API_KEY_"
 
