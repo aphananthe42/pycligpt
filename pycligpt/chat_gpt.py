@@ -1,14 +1,13 @@
 import getpass
-import os
 
 import openai
 
-import color
+from . import color, settings
 
 
 class ChatGPT:
     def __init__(self, useGPT4: bool, timeout: float):
-        openai.api_key = os.environ["OPENAI_API_KEY"]
+        openai.api_key = settings.OPENAI_API_KEY
         self.model = "gpt-4" if useGPT4 else "gpt-3.5-turbo"
         self.messages = [
             {

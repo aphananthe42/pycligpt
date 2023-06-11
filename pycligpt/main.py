@@ -1,13 +1,13 @@
 import argparse
 
-from dotenv import load_dotenv
-
-import chat_gpt
-import color
+from . import chat_gpt, color
 
 
-def main(args: argparse.Namespace):
-    load_dotenv()
+def main():
+    parser = argparse.ArgumentParser(description="Config argument to set up ChatGPT")
+    parser.add_argument("--gpt4", action="store_true", help="Use GPT-4 or not")
+    parser.add_argument("-t", "--timeout", default=30, type=int, help="Timeout until receive response")
+    args = parser.parse_args()
 
     gpt = chat_gpt.ChatGPT(args.gpt4, args.timeout)
     gpt.print_greeting()
@@ -33,12 +33,3 @@ def main(args: argparse.Namespace):
             print(color.Color.REVERCE + color.Color.RED + "Keyboard interrupt" + color.Color.END)
         except Exception as e:
             print(color.Color.REVERCE + color.Color.RED + f"{e}" + color.Color.END)
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Config argument to set up ChatGPT")
-    parser.add_argument("--gpt4", action="store_true", help="Use GPT-4 or not")
-    parser.add_argument("-t", "--timeout", default=30, type=int, help="Timeout until receive response")
-    args = parser.parse_args()
-
-    main(args)
