@@ -1,4 +1,4 @@
-## PyCliGPT
+# PyCliGPT
 
 This is a program that allows you to talk to ChatGPT from the terminal.
 
