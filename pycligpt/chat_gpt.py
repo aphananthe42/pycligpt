@@ -2,18 +2,24 @@ import getpass
 
 import openai
 
-from . import color, settings
+from . import color, prompt, settings
 
 
 class ChatGPT:
-    def __init__(self):
+    def __init__(self, to_english: bool, to_japanese: bool):
         openai.api_key = settings.OPENAI_API_KEY
         self.model = settings.GPT_MODEL
         self.timeout = settings.REQUEST_TIMEOUT
+        if to_english:
+            system_prompt = prompt.Prompt.to_english.value
+        elif to_japanese:
+            system_prompt = prompt.Prompt.to_japanese.value
+        else:
+            system_prompt = prompt.Prompt.default.value
         self.messages = [
             {
                 "role": "system",
-                "content": "You are a helpful assistant.",
+                "content": system_prompt,
             }
         ]
 
