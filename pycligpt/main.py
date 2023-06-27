@@ -1,8 +1,16 @@
+import argparse
+
 from . import chat_gpt, color
 
 
 def main():
-    gpt = chat_gpt.ChatGPT()
+    parser = argparse.ArgumentParser()
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-en", "--english", action="store_true")
+    group.add_argument("-ja", "--japanese", action="store_true")
+    args = parser.parse_args()
+
+    gpt = chat_gpt.ChatGPT(to_english=args.english, to_japanese=args.japanese)
     gpt.print_greeting()
 
     while True:
