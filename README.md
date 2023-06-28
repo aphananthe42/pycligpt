@@ -52,7 +52,18 @@ $ cd path/to/pycligpt
 $ python3 -m pycligpt
 ```
 
-2. Exit
+2. Translation Mode
+Every prompt you type is translated into English.
+```shell
+$ python3 -m pycligpt -en
+```
+
+Every prompt you type is translated into Japanese.
+```shell
+$ python3 -m pycligpt -ja
+```
+
+3. Exit
 If you wish to exit, please enter the following words...
 "exit", "quit" or "bye"
 ```shell
