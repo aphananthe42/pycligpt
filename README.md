@@ -9,7 +9,7 @@ The model is gpt-3.5-turbo by default, but it can also talk to other models in t
 
 ## What you need
 
-1. OpenAI API key
+1. OpenAI API key  
    You can get it from the link [here](https://platform.openai.com/account/api-keys).
 
 2. Python3.7 or higher
@@ -52,20 +52,20 @@ $ cd path/to/pycligpt
 $ python3 -m pycligpt
 ```
 
-2. Translation Mode
-Every prompt you type is translated into English.
+2. Translation Mode  
+   Every prompt you type is translated into English.
 ```shell
 $ python3 -m pycligpt -en
 ```
 
-Every prompt you type is translated into Japanese.
+   Every prompt you type is translated into Japanese.
 ```shell
 $ python3 -m pycligpt -ja
 ```
 
-3. Exit
-If you wish to exit, please enter the following words...
-"exit", "quit" or "bye"
+3. Exit  
+   If you wish to exit, please enter the following words...
+   "exit", "quit" or "bye"
 ```shell
 >>> exit
 ```
