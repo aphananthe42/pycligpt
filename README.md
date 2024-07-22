@@ -2,32 +2,42 @@
 
 This is a program that allows you to talk to ChatGPT from the terminal.
 
-The model is gpt-3.5-turbo by default, but it can also talk to other models in the configuration.
+The model is gpt-3.5-turbo by default, but it can also talk to other models in
+the configuration.
 
 ![screenshot](https://github.com/aphananthe42/pycligpt/blob/main/Assets/Screenshot.png)
 
-
 ## What you need
 
-- **OpenAI API key**  
-You can get it from the link [here](https://platform.openai.com/account/api-keys).
+- **OpenAI API key**
+
+  You can get it from the link
+  [here](https://platform.openai.com/account/api-keys).
 
 - **Python3.7 or higher**
-
 
 ## Preparation
 
 1. Clone repository from Github.
+
 ```shell
 $ git clone https://github.com/aphananthe42/pycligpt
 ```
 
-2. Install dependent libraries from pip.
-```shell
-$ pip3 install -r requirement.txt
+2. Setup Rye(if needed)
+
+```
+https://rye.astral.sh/guide/installation/
 ```
 
-3. Make .env file to configure.
+3. Install dependent libraries from pip.
+
+```shell
+$ rye sync
+```
+
+4. Make .env file to configure.
+
 ```shell
 $ cd path/to/pycligpt
 $ touch .env
@@ -44,33 +54,36 @@ GPT_MODEL = "gpt-3.5-turbo"
 REQUEST_TIMEOUT = 30
 ```
 
-
 ## Usage
+
 1. Launch
+
 ```shell
 $ cd path/to/pycligpt
-$ python3 -m pycligpt
+$ rye run python -m pycligpt
 ```
 
 2. Translation Mode
+
 ```shell
 # Every prompt you type is translated into English.
-$ python3 -m pycligpt -en
+$ rye run python -m pycligpt -en
 ```
 
 ```shell
 # Every prompt you type is translated into Japanese.
-$ python3 -m pycligpt -ja
+$ rye run python -m pycligpt -ja
 ```
 
-3. Exit  
+3. Exit
+
 ```shell
 # If you wish to exit, please enter the following words...
 # "exit", "quit" or "bye"
 >>> exit
 ```
 
-
 ## License
 
-This project is licensed under the [MIT License](https://github.com/aphananthe42/pycligpt/blob/main/LICENSE).
+This project is licensed under the
+[MIT License](https://github.com/aphananthe42/pycligpt/blob/main/LICENSE).
