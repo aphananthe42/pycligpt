@@ -30,7 +30,7 @@ $ git clone https://github.com/aphananthe42/pycligpt
 https://rye.astral.sh/guide/installation/
 ```
 
-3. Install dependent libraries from pip.
+3. Install dependent libraries.
 
 ```shell
 $ rye sync
