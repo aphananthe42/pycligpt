@@ -24,16 +24,16 @@ the configuration.
 $ git clone https://github.com/aphananthe42/pycligpt
 ```
 
-2. Setup Rye(if needed)
+2. Setup uv(if needed)
 
 ```
-https://rye.astral.sh/guide/installation/
+https://docs.astral.sh/uv/getting-started/installation/
 ```
 
 3. Install dependent libraries.
 
 ```shell
-$ rye sync
+$ uv sync
 ```
 
 4. Make .env file to configure.
@@ -60,19 +60,19 @@ REQUEST_TIMEOUT = 30
 
 ```shell
 $ cd path/to/pycligpt
-$ rye run python -m pycligpt
+$ uv run python -m pycligpt
 ```
 
 2. Translation Mode
 
 ```shell
 # Every prompt you type is translated into English.
-$ rye run python -m pycligpt -en
+$ uv run python -m pycligpt -en
 ```
 
 ```shell
 # Every prompt you type is translated into Japanese.
-$ rye run python -m pycligpt -ja
+$ uv run python -m pycligpt -ja
 ```
 
 3. Exit
